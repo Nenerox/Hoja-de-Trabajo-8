@@ -1,4 +1,4 @@
-public class Paciente {
+public class Paciente implements Comparable<Paciente> {
     String nombre;
     String sintoma;
     String prioridad;
@@ -19,5 +19,10 @@ public class Paciente {
 
     public String getPrioridad() {
         return prioridad;
+    }
+
+    @Override
+    public int compareTo(Paciente o) {
+        return this.prioridad.compareTo(o.prioridad);
     }
 }
