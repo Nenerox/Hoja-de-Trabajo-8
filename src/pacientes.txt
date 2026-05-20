@@ -1,0 +1,10 @@
+Juan Perez, fractura de pierna, C
+Maria Ramirez, apendicitis, A
+Lorenzo Toledo, chikunguya, E
+Carmen Sarmientos, dolores de parto, B
+Carlos Méndez, ataque cardíaco, A
+Ana López, fiebre alta, D
+Roberto García, accidente automovilístico, B
+Lucía Fernández, migraña severa, C
+Miguel Torres, quemaduras leves, D
+Sofía Morales, dificultad respiratoria, A
