@@ -1,7 +1,7 @@
 public class Paciente implements Comparable<Paciente> {
-    String nombre;
-    String sintoma;
-    String prioridad;
+    private String nombre;
+    private String sintoma;
+    private String prioridad;
 
     public Paciente(String nombre, String sintoma, String prioridad) {
         this.nombre = nombre;
@@ -25,4 +25,10 @@ public class Paciente implements Comparable<Paciente> {
     public int compareTo(Paciente o) {
         return this.prioridad.compareTo(o.prioridad);
     }
+    
+    @Override
+    public String toString() {
+        return nombre + " , " + sintoma + " , " + prioridad;
+    }
+
 }
