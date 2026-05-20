@@ -1,14 +1,14 @@
 import java.util.ArrayList;
 
-public class VectoHeap<E extends Comparable<E>> implements PriorityQueue<E> {
+public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E> {
 
     private ArrayList<E> heap;
 
-    public VectoHeap() {
+    public VectorHeap() {
         this.heap = new ArrayList<>();
     }
 
-    /*
+    /**
      * Intercambia dos elementos en el heap.
      * @param i Índice del primer elemento.
      * @param j Índice del segundo elemento.
@@ -19,7 +19,7 @@ public class VectoHeap<E extends Comparable<E>> implements PriorityQueue<E> {
         heap.set(j, aux);
     }
 
-    /*
+    /**
      * Mueve un elemento hacia arriba en el heap hasta que se cumple la propiedad del heap.
      * @param index El índice del elemento a comprobar si se mueve hacia arriba.
      */
@@ -36,7 +36,7 @@ public class VectoHeap<E extends Comparable<E>> implements PriorityQueue<E> {
         }
     }
 
-    /*
+    /**
      * Inserta un elemento en el heap.
      * @param elemento elemento a insertar.
      */
@@ -46,11 +46,11 @@ public class VectoHeap<E extends Comparable<E>> implements PriorityQueue<E> {
         moverArriba(heap.size() - 1);
     }
 
-    /*
+    /**
      * Mueve un elemento hacia abajo en el heap hasta donde se cumple la propiedad del heap para mantener el orden correcto.
      * @param index El índice del elemento a comprobar si se mueve hacia abajo.
      */
-    public void moverAbajo(int index) {
+    private void moverAbajo(int index) {
         int size = heap.size();
         boolean terminado = false;
         while (!terminado) {
@@ -73,7 +73,7 @@ public class VectoHeap<E extends Comparable<E>> implements PriorityQueue<E> {
         }
     }
 
-    /*
+    /**
      * Elimina y devuelve el elemento hasta arriba del heap, y vuelve a comprobar la propiedad del heap con el último elemento.
      * @return El elemento mínimo del heap, o null si el heap está vacío.
      */
@@ -93,7 +93,7 @@ public class VectoHeap<E extends Comparable<E>> implements PriorityQueue<E> {
         return min;
     }
 
-    /*
+    /**
      * Devuelve el elemento mínimo del heap sin eliminarlo.
      * @return El elemento mínimo del heap, o null si el heap está vacío.
      */
@@ -105,7 +105,7 @@ public class VectoHeap<E extends Comparable<E>> implements PriorityQueue<E> {
         return heap.get(0);
     }
 
-    /*
+    /**
      * Comprueba si el heap está vacío.
      * @return true si el heap está vacío, false en caso contrario.
      */
